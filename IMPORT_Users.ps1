@@ -10,6 +10,7 @@ foreach ($user in $users) {
     $username = $user.Username
     $password = ConvertTo-SecureString $user.password -AsPlainText -Force
     $ou = if ($index -le 450) { "users" } elseif ($index -le 470) { "IT" } else { "extern" }
+    $displayName = "$($user.nom) $($user.prenom)"
 
     # Créer l'utilisateur
     New-ADUser -SamAccountName $username -UserPrincipalName "$username@MonBuisson.com"
