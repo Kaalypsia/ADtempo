@@ -22,9 +22,9 @@ New-ADOrganizationalUnit -Name $ouExtern -Path "OU=Buissounet,DC=MonBuisson,DC=c
 Install-WindowsFeature DNS
 
 # Installer RSAT (Remote Server Administration Tools)
-Install-WindowsFeature RSAT
+# Install-WindowsFeature RSAT
 
-# Installation de tools indispensables
+# Installation de tools indispensables (dont RSAT)
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Vérification de l'installation
