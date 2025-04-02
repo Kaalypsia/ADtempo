@@ -14,6 +14,7 @@ Install-ADDSForest -DomainName $domainName
     -DomainNetbiosName "MONBUISSON.com"
  #   -ForestMode Win2022
  #   -DomainMode Win2022
+    -InstallDNS
     -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "mdp123!" -Force)
 
 # Créer les OUs
