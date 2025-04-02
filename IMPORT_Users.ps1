@@ -14,12 +14,12 @@ foreach ($user in $users) {
 
     # Créer l'utilisateur
     New-ADUser -SamAccountName $username -UserPrincipalName "$username@MonBuisson.com"
-        -Name $displayName
-        -GivenName $user.prenom
-        -Surname $user.nom
-        -PasswordNeverExpires $true
-        -AccountPassword $password
-        -Enabled $true -Path "OU=$ou,DC=MonBuisson,DC=com"
+        -Name $displayName `
+        -GivenName $user.prenom `
+        -Surname $user.nom `
+        -PasswordNeverExpires $true `
+        -AccountPassword $password `
+        -Enabled $true -Path "OU=$ou,DC=MonBuisson,DC=com" `
 
     # Incrémenter l'index
     $index++
