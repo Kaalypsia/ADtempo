@@ -11,7 +11,7 @@ $ouExtern = "extern"
 
 # Créer la forêt et le domaine
 Install-ADDSForest -DomainName $domainName
-    -DomainNetbiosName "MONBUISSON.com"
+    -DomainNetbiosName "MONBUISSON"
  #   -ForestMode Win2022
  #   -DomainMode Win2022
     -InstallDNS
