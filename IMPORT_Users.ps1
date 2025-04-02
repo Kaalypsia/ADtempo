@@ -19,7 +19,7 @@ foreach ($user in $users) {
         -Surname $user.nom `
         -PasswordNeverExpires $true `
         -AccountPassword $password `
-        -Enabled $true -Path "OU=$ou,DC=MonBuisson,DC=com"
+        -Enabled $true -Path "OU=$ou,OU=Buissounet,DC=MonBuisson,DC=com"
 
     # Incrémenter l'index
     $index++
