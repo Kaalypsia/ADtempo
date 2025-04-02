@@ -6,7 +6,7 @@ La ligne Powershell à taper pour obtenir vos scripts sur votre Windows Serveur 
 Invoke-WebRequest -Uri "https://github.com/Kaalypsia/ADtempo.git" -OutFile "$env:USERPROFILE\Downloads\main.zip"
 ```
 
-Extraction des fichiers manuelles vers le dossier crée pour l'occasion : C:\Scripts.
+Extraction des fichiers manuelle vers le dossier crée pour l'occasion : C:\Scripts.
 
 Pour lancer le 1er script : (phase de test)
 ```powershell
