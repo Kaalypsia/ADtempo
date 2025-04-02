@@ -13,7 +13,7 @@ foreach ($user in $users) {
     $displayName = "$($user.nom) $($user.prenom)"
 
     # Créer l'utilisateur
-    New-ADUser -SamAccountName $username -UserPrincipalName "$username@MonBuisson.com" `
+    New-ADUser -SamAccountName $username `
         -Name $displayName `
         -GivenName $user.prenom `
         -Surname $user.nom `
