@@ -4,14 +4,14 @@
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Promouvoir le serveur en contrôleur de domaine
-$domainName = "MonBuisson"
+$domainName = "MonBuisson.com"
 $ouUsers = "users"
 $ouIT = "IT"
 $ouExtern = "extern"
 
 # Créer la forêt et le domaine
 Install-ADDSForest -DomainName $domainName
-    -DomainNetbiosName "MONBUISSON"
+    -DomainNetbiosName "MONBUISSON.com"
  #   -ForestMode Win2022
  #   -DomainMode Win2022
     -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "mdp123!" -Force)
