@@ -24,6 +24,9 @@ Install-WindowsFeature DNS
 # Installer RSAT (Remote Server Administration Tools)
 Install-WindowsFeature RSAT
 
+# Installation de tools indispensables
+Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+
 # Vérification de l'installation
 if (Get-WindowsFeature AD-Domain-Services | Where-Object {$_.Installed -eq $true}) {
     Write-Host "ADDS a été installé avec succès."
