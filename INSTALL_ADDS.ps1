@@ -1,7 +1,7 @@
 # Script d'installation d'Active Directory Domain Services (ADDS)
 
 # Installer ADDS
-Install-WindowsFeature AD-Domain-Services
+Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Promouvoir le serveur en contrôleur de domaine
 $domainName = "MonBuisson"
@@ -18,14 +18,6 @@ New-ADOrganizationalUnit -Name $ouUsers -Path "OU=Buissounet,DC=MonBuisson,DC=co
 New-ADOrganizationalUnit -Name $ouIT -Path "OU=Buissounet,DC=MonBuisson,DC=com"
 New-ADOrganizationalUnit -Name $ouExtern -Path "OU=Buissounet,DC=MonBuisson,DC=com"
 
-# Installer le rôle DNS
-Install-WindowsFeature DNS
-
-# Installer RSAT (Remote Server Administration Tools)
-# Install-WindowsFeature RSAT
-
-# Installation de tools indispensables (dont RSAT)
-Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Vérification de l'installation
 if (Get-WindowsFeature AD-Domain-Services | Where-Object {$_.Installed -eq $true}) {
