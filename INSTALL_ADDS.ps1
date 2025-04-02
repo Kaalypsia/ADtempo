@@ -5,6 +5,7 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Promouvoir le serveur en contrôleur de domaine
 $domainName = "MonBuisson.com"
+$ouBuissounet = "Buissounet"
 $ouUsers = "users"
 $ouIT = "IT"
 $ouExtern = "extern"
