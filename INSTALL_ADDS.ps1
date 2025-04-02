@@ -13,9 +13,10 @@ $ouExtern = "extern"
 Install-ADDSForest -DomainName $domainName -DomainNetbiosName "MONBUISSON" -ForestMode Win2016 -DomainMode Win2016 -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "VotreMotDePasseSécurisé" -Force)
 
 # Créer les OUs
-New-ADOrganizationalUnit -Name $ouUsers -Path "DC=MonBuisson,DC=com"
-New-ADOrganizationalUnit -Name $ouIT -Path "DC=MonBuisson,DC=com"
-New-ADOrganizationalUnit -Name $ouExtern -Path "DC=MonBuisson,DC=com"
+New-ADOrganizationalUnit -Name $ouBuissounet -Path "DC=MonBuisson,DC=com"
+New-ADOrganizationalUnit -Name $ouUsers -Path "OU=Buissounet,DC=MonBuisson,DC=com"
+New-ADOrganizationalUnit -Name $ouIT -Path "OU=Buissounet,DC=MonBuisson,DC=com"
+New-ADOrganizationalUnit -Name $ouExtern -Path "OU=Buissounet,DC=MonBuisson,DC=com"
 
 # Installer le rôle DNS
 Install-WindowsFeature DNS
