@@ -10,7 +10,7 @@ $ouIT = "IT"
 $ouExtern = "extern"
 
 # Créer la forêt et le domaine
-Install-ADDSForest -DomainName $domainName -DomainNetbiosName "MONBUISSON" -ForestMode Win2016 -DomainMode Win2016 -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "VotreMotDePasseSécurisé" -Force)
+Install-ADDSForest -DomainName $domainName -DomainNetbiosName "MONBUISSON" -ForestMode Win2022 -DomainMode Win2022 -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "VotreMotDePasseSécurisé" -Force)
 
 # Créer les OUs
 New-ADOrganizationalUnit -Name $ouBuissounet -Path "DC=MonBuisson,DC=com"
