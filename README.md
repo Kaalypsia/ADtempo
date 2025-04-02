@@ -12,3 +12,5 @@ Pour lancer le 1er script : (phase de test)
 ```powershell
 powershell -ExecutionPolicy Bypass -File "C:\Scripts\ADtempo-main\CONFIG_Machine.ps1"
 ```
+
+Réitérer le manipulation pour les scripts suivant : 1/ CONFIG, 2/INSTALL ADDS, 3/ IMPORT_Users
