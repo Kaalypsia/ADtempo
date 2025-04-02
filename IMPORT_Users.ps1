@@ -1,8 +1,8 @@
 # Script pour l'importation des utilisateurs à partir d'un fichier CSV
 
 # Charger les utilisateurs depuis le fichier CSV
-$csvFile = "C:\scripts\users.csv"  # À personnaliser
-$users = Import-Csv -Path $csvFile
+$csvFile = "C:\scripts\ADtempo-main\users.csv"  # À personnaliser
+$users = Import-Csv -Path $csvFile -Delimiter ','
 
 # Créer les utilisateurs et les ajouter aux OUs appropriées
 $index = 1
