@@ -32,8 +32,8 @@ Write-Output "Remote Desktop activation..."
 # Mise en route du Remote Desktop
 Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name fDenyTSConnections -Value 0
 # Lancement RDP / Windows Firewall
-Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-Write-Output "Remote Desktop lancé et règles firewall appliquées."
+# Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+# Write-Output "Remote Desktop lancé et règles firewall appliquées."
 
 # Redémarrage pour application
 $RestartConfirmation = Read-Host "Do you want to restart the computer to apply the changes? (Answer Y or N)"
