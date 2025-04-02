@@ -12,8 +12,8 @@ $ouExtern = "extern"
 # Créer la forêt et le domaine
 Install-ADDSForest -DomainName $domainName
     -DomainNetbiosName "MONBUISSON"
-    -ForestMode Win2022
-    -DomainMode Win2022
+ #   -ForestMode Win2022
+ #   -DomainMode Win2022
     -SafeModeAdministratorPassword (ConvertTo-SecureString -AsPlainText "mdp123!" -Force)
 
 # Créer les OUs
