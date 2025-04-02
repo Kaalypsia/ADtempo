@@ -14,7 +14,7 @@ foreach ($user in $users) {
 
     # Créer l'utilisateur
     New-ADUser -SamAccountName $username -UserPrincipalName "$username@MonBuisson.com"
-        -Name "$($user.nom) $($user.prenom)"
+        -Name $displayName
         -GivenName $user.prenom
         -Surname $user.nom
         -PasswordNeverExpires $true
