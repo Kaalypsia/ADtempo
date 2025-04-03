@@ -7,7 +7,7 @@ Invoke-WebRequest -Uri "https://github.com/Kaalypsia/ADtempo.git" -OutFile "$env
 ```
 
 Extraction des fichiers manuelle vers le dossier que vous créez pour l'occasion : C:\Scripts.
-Il est préconisé, après chaque script, de vérifier la bonne application des fonctions.
+*Il est préconisé, après chaque script, de vérifier la bonne application des fonctions.*
 
 Pour lancer le 1er script :
 ```powershell
@@ -43,6 +43,6 @@ Rôle de ce troisième script :
 - Les implanter dans l'OU users.
 
 -------UwU-------
-(Configuration entièrement testée et approuvée sur VM Windows Server 2022)
+*(Configuration entièrement testée et approuvée sur VM Windows Server 2022)*
 
-NB : Le LAUNCH_AllinOne.ps1 est en cours de développement et reprendra les scripts de 1 à 3, dans l'ordre, avec des vérifications précises automatisées pour simplifier le process de déploiement. A suivre...
+*NB : Le LAUNCH_AllinOne.ps1 est en cours de développement et reprendra les scripts de 1 à 3, dans l'ordre, avec des vérifications précises automatisées pour simplifier le process de déploiement. A suivre...*
