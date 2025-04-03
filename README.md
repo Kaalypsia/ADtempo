@@ -13,13 +13,11 @@ Pour lancer le 1er script :
 powershell -ExecutionPolicy Bypass -File "C:\Scripts\ADtempo-main\CONFIG_Machine.ps1"
 ```
 
-Réitérer le manipulation pour les scripts suivant dans cet :
-1/ CONFIG,
-2/INSTALL ADDS
+Réitérer le manipulation pour les scripts suivant dans cet ordre :
+2/INSTALL ADDS, 3/ IMPORT_Users
 ```powershell
 powershell -ExecutionPolicy Bypass -File "C:\Scripts\ADtempo-main\INSTALL_ADDS.ps1"
 ```
-3/ IMPORT_Users
 ```powershell
 powershell -ExecutionPolicy Bypass -File "C:\Scripts\ADtempo-main\IMPORT_Users.ps1"
 ```
