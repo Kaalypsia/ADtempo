@@ -33,9 +33,16 @@ Rôle de ce second script :
 - Créer la forêt,
 - Installer le DNS,
 - Créer les OU,
+- Vérifier le succès d'installation de l'ADDS.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File "C:\Scripts\ADtempo-main\IMPORT_Users.ps1"
 ```
+Rôle de ce troisième script :
+- Créer les utilisateurs à partir du fichier users.csv joint,
+- Les implanter dans l'OU users.
 
+*******UwU*******
 (Configuration entièrement testée et approuvée sur VM Windows Server 2022)
+
+NB : Le LAUNCH_AllinOne.ps1 est en cours de développement et reprendra les scripts de 1 à 3, dans l'ordre, avec des vérifications précises automatisées pour simplifier le process de déploiement. A suivre...
